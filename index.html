@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Image Gallery</h1>
+        <p>Beautiful images wih interactive design</p>
+    </header>
+
+    <div class="filter-buttons">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="nature">Nature</button>
+        <button data-filter="technology">Technology</button>
+        <button data-filter="animals">Animals</button>
+        <button data-filter="space">Space</button>
+    </div>
+
+    <div class="gallery">
+
+        <div class="image-card nature">
+            <img src="images/nature/nat1.jpeg" alt="Nature">
+        </div>
+
+        <div class="image-card nature">
+            <img src="images/nature/nat2.jpeg" alt="Nature">
+        </div>
+
+        <div class="image-card nature">
+            <img src="images/nature/nat3.jpeg" alt="Nature">
+        </div>
+ 
+        <div class="image-card nature">
+            <img src="images/nature/nat4.jpeg" alt="Nature">
+        </div>
+
+        <div class="image-card technology">
+            <img src="images/technology/tech1.jpeg" alt="Technology">
+        </div>
+
+        <div class="image-card technology">
+            <img src="images/technology/tech2.jpeg" alt="Technology">
+        </div>
+
+        <div class="image-card technology">
+            <img src="images/technology/tech3.jpeg" alt="Technology">
+        </div>
+
+        <div class="image-card animals">
+            <img src="images/animals/elephant.jpeg" alt="Animals">
+        </div>
+
+        <div class="image-card animals">
+            <img src="images/animals/lion.jpeg" alt="Animals">
+        </div>
+
+        <div class="image-card animals">
+            <img src="images/animals/tiger.jpeg" alt="Animals">
+        </div>
+
+        <div class="image-card space">
+            <img src="images/space/space1.jpeg" alt="Space">
+        </div>
+
+        <div class="image-card space">
+            <img src="images/space/space2.jpeg" alt="Space">
+        </div>
+
+         <div class="image-card space">
+            <img src="images/space/space3.jpeg" alt="Space">
+        </div>
+
+         <div class="image-card space">
+            <img src="images/space/space4.jpeg" alt="Space">
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+
+    <div class="lightbox">
+        <span class="close">&times;</span>
+
+        <button class="prev">&#10094;</button>
+
+        <img class="lightbox-img" src="" alt="">
+
+        <button class="next">&#10095;</button>
+
+        <div class="counter"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

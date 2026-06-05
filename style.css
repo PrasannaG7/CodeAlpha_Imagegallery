@@ -1,0 +1,141 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#111;
+    color:white;
+    min-height:100vh;
+}
+
+header{
+    text-align:center;
+    padding:30px;
+}
+
+header h1{
+    margin-bottom:10px;
+}
+
+.filter-buttons{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+}
+
+.filter-buttons button{
+    padding:10px 20px;
+    border:none;
+    cursor:pointer;
+    border-radius:8px;
+    background:#333;
+    color:white;
+    transition:0.3s;
+}
+
+.filter-buttons button:hover,
+.filter-buttons button.active{
+    background:#00bcd4;
+}
+
+.gallery{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    padding-bottom:40px;
+}
+
+.image-card{
+    overflow:hidden;
+    border-radius:10px;
+}
+
+.image-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.image-card img:hover{
+    transform:scale(1.08);
+}
+
+.lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.9);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    z-index:1000;
+}
+
+.lightbox.active{
+    display:flex;
+}
+
+.lightbox-img{
+    width:80%;
+    max-width:900px;
+    max-height:80vh;
+    object-fit:contain;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:30px;
+    font-size:40px;
+    cursor:pointer;
+}
+
+.prev,
+.next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:40px;
+    border:none;
+    background:none;
+    color:white;
+    cursor:pointer;
+}
+
+.prev{
+    left:20px;
+}
+
+.next{
+    right:20px;
+}
+
+.counter{
+    margin-top:15px;
+    font-size:18px;
+}
+
+@media(max-width:992px){
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .lightbox-img{
+        width:95%;
+    }
+}
